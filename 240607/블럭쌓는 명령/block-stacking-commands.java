@@ -30,6 +30,6 @@ public class Main {
         
         Arrays.sort(arr);
         
-        System.out.println(arr[(N / 2) +1]);
+        System.out.println(arr[(arr.length / 2) + 1]);
     }
 }
