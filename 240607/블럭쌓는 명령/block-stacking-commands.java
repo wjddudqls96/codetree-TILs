@@ -13,16 +13,19 @@ public class Main {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
         
-        int[] arr = new int[N + 1];
+        int[] arr = new int[N + 2];
         
         for(int i = 0; i < K; i++) {
         	st = new StringTokenizer(in.readLine());
         	int A = Integer.parseInt(st.nextToken());
         	int B = Integer.parseInt(st.nextToken());
         	
-         	for(int j = A; j <= B; j++) {
-         		arr[j]++;
-         	}
+         	arr[A]++;
+         	arr[B + 1]--;
+        }
+        
+        for(int i = 1; i <= N; i++) {
+        	arr[i] += arr[i-1];
         }
         
         Arrays.sort(arr);
